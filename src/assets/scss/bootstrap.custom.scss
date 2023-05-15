@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+// Override
+$white:#fff;
+$body-color: #2d3335;
+$body-secondary-color: #667074;
+$body-bg: #eff3f5;
+$font-family-sans-serif:  'Ubuntu', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+
+$primary: #4F00F6;
+$secondary: #7D00FA;
+$danger: #FF134C;
+$success: #06E1B0;
+$warning: #FFBD12;
+$info: #1BE4FF;
+$light: #D1D1D1;
+
+// Global
+$border-radius:1.5rem;
+$spacer: 1.5rem;
+
+// Alert
+$alert-border-width:0;
+
+// Button
+$btn-border-radius: .6rem;
+
+// Cards
+$card-bg: $white;
+$card-border-color: #dee6e9;
+$card-title-spacer-y: $spacer + .8rem;
+
+.card-title {
+    font-weight:bold;
+}
+
+
+// Form
+$input-bg:$white;
+$input-border-radius: .6rem;
+$input-border-color: #b1bdc2;
+
+$form-label-font-weight: 400;
+
+// Focus ring
+$focus-ring-width:      .1rem;
+// $focus-ring-opacity:    2;
+// $focus-ring-color:      darken($primary, 100%);
+// $focus-ring-blur:       0 !default;
+// $focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color !default;
+
+
+// Table 
+$table-th-font-weight:  normal;
+
+
+
+@import "bootstrap/scss/bootstrap";
+
+.card-sm {
+    @extend .card;
+}
+
+.card-sm .card-text {
+    @extend .lh-1;
+    @extend .text-muted;
+    @extend .small;
+}
+
+.card-subtitle {
+    margin-top: calc(-0.8 * var(--bs-card-title-spacer-y));
+    opacity: .65;
+}
+
+.row-sm {
+    @extend .row;
+}
+
+.row-sm .col {
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+.card-action {
+ @extend .card;
+}
+
+.card-action .card-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-button {
+    @extend .small;
+    @extend .text-muted;
+
+    border: 0;
+
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-action .card-button-icon {
+    @extend .border;
+    @extend .rounded;
+    padding: $spacer*.875;
+    margin-bottom: .65rem;
+}
+
+.card-button-icon svg{
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: $primary;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    @extend .mb-2;
+    @extend .ps-1;
+}
+
+.heading > * {
+    margin-bottom: 0;
+    @extend .fw-bold;
+}
+
+.heading-action {
+    font-size: .875rem;
+    font-weight: normal !important;
+    background: none;
+    border: 0;
+    color:$body-secondary-color;
+}
+
+
+
+// Table override
+// .table > tbody > tr > td {
+// }
+
+.table > thead > tr > th {
+    color:$body-secondary-color;
+    font-size: .875rem;
+}
+
